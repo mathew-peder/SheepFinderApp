@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <ImageView fx:id="imageview" fitHeight="354.0" fitWidth="578.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+    </center>
+    <right>
+        <Slider fx:id="slider" onDragDetected="#changeIntensity" orientation="VERTICAL" prefHeight="348.0" prefWidth="16.0" BorderPane.alignment="CENTER" />
+    </right>
+    <bottom>
+        <ButtonBar fx:id="buttonbar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button fx:id="openbutton" layoutX="525.0" layoutY="17.0" mnemonicParsing="false" onAction="#openImage" text="Open Image" />
+                <Button fx:id="scanimage" layoutX="430.0" layoutY="17.0" mnemonicParsing="false" onAction="#imageScan" text="Scan Image" />
+                <Button fx:id="colorbutton" layoutX="335.0" layoutY="17.0" mnemonicParsing="false" onAction="#colorChange" text="Change Color" />
+                <Button fx:id="closebutton" layoutX="240.0" layoutY="17.0" mnemonicParsing="false" onAction="#closeImage" text="Close Image" />
+            </buttons>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets right="72.0" />
+            </padding>
+        </ButtonBar>
+    </bottom>
+</BorderPane>
